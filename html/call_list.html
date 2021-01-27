@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>집콕</title>
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.global.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+</head>
+
+<body>
+	<div class="base-wrap" id="baseWrap">
+		<header class="base-header" id="baseHeader"></header>
+		<div class="base-body" id="baseBody">
+			<main class="base-main" id="baseMain">
+				<!-- content -->
+
+				<ul class="list-round">
+					<li>
+						
+						<button type="button">
+							<b style="background-image:url(../resources/img/call_1.jpg);"></b>
+							<span>싱크대</span>
+						</button>
+					</li>
+					<li>
+						<button type="button">
+							<b style="background-image:url(../resources/img/call_2.jpg);"></b>
+							<span>유리시공</span>
+						</button>
+					</li>
+					<li>
+						<button type="button">
+							<b style="background-image:url(../resources/img/call_3.jpg);"></b>
+							<span>창호 서비스</span>
+						</button>
+					</li>
+					<li>
+						<button type="button">
+							<b style="background-image:url(../resources/img/call_4.jpg);"></b>
+							<span>하수구 서비스</span>
+						</button>
+					</li>
+					<li>
+						<button type="button">
+							<b style="background-image:url(../resources/img/call_5.jpg);"></b>
+							<span>전기/조명 서비스</span>
+						</button>
+					</li>
+					<li>
+						<button type="button">
+							<b style="background-image:url(../resources/img/call_6.jpg);"></b>
+							<span>욕실 서비스</span>
+						</button>
+					</li>
+					<li>
+						<button type="button">
+							<b style="background-image:url(../resources/img/call_7.jpg);"></b>
+							<span>현관문/현문</span>
+						</button>
+					</li>
+					<li>
+						<button type="button">
+							<b style="background-image:url(../resources/img/call_8.jpg);"></b>
+							<span>방문 보수 및 시공</span>
+						</button>
+					</li>
+					<li>
+						<button type="button">
+							<b style="background-image:url(../resources/img/call_9.jpg);"></b>
+							<span>방수/단열 공사</span>
+						</button>
+					</li>
+					<li></li>
+				</ul>
+
+				<!-- //content -->
+			</main>
+
+			
+		</div>
+		<section class="base-nav" id="baseNav"></section>
+	</div>
+
+	<section class="ui-modal" id="modalCallOption" role="dialog" aria-hidden="true">
+		<div class="ui-modal-wrap">
+			<header class="ui-modal-header">
+				<h1 class="ui-modal-tit"><span>원하는 작업을 선택해주세요.</span></h1>
+			</header>
+			<div class="ui-modal-cont">
+				<fieldset>
+					<legend>작업선택</legend>
+					<div class="field-row check-box">
+						<h3>작업 유형 선택</h3>
+						<input type="checkbox" id="ckb1_1">
+						<label for="ckb1_1" class="lb-check">경첩교체</label>
+
+						<input type="checkbox" id="ckb1_2">
+						<label for="ckb1_2" class="lb-check">싱크대 입수</label>
+
+						<input type="checkbox" id="ckb1_3">
+						<label for="ckb1_3" class="lb-check">배수구 교체</label>
+					</div>
+
+					<div class="field-row check-box">
+						<h3>작업 상세 선택</h3>
+						<input type="radio" id="ckb2_1" name="ckb2">
+						<label for="ckb2_1" class="lb-check">설치</label>
+
+						<input type="radio" id="ckb2_2" name="ckb2">
+						<label for="ckb2_2" class="lb-check">교체</label>
+					</div>
+
+					<div class="field-row check-box">
+						<h3>작업 예상 정보</h3>
+						<dl>
+							<div>
+								<dt>소요시간 : </dt>
+								<dd><b>30</b> 분</dd>
+							</div>
+							<div>
+								<dt>투입인원 : </dt>
+								<dd><b>1</b> 명</dd>
+							</div>
+							<div>
+								<dt>예상공임 : </dt>
+								<dd><b>24,000</b> 원(자제비 별도)</dd>
+							</div>
+						</dl>
+						<em class="bul-care">* 실제 작업시 시간, 인원, 가격은 상황에 따라 달라질 수 있습니다.</em>
+					</div>
+					
+				</fieldset>
+			</div>
+			<div class="ui-modal-footer">
+				<div class="btn-wrap">
+				<button type="button" class="btn-base type-denial" onclick="$plugins.uiModalClose({ id:'modalCallOption' })">
+						<span>취소</span>
+					</button>
+					<button type="button" class="btn-base" id="callNext">
+						<span>다음</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<script>
+		;(function($, win, doc, undefined) {
+			$(doc).ready(function() {
+				$plugins.common.init();
+
+				$('#callNext').on('click', function(){
+					location.href = '../html/call.html';
+				});
+
+				$('.list-round button').on('click', function(){
+					$plugins.uiModalOpen({ 
+						id:'modalCallOption', 
+						type: 'normal',
+						ps: 'bottom',
+						mg: 10,
+						callback:function() { console.log('open callback'); },
+						closeCallback:function() { console.log('close callback'); },
+						endfocus:false 
+					});
+				});
+			});
+		})(jQuery, window, document);
+	</script>
+</body>
+</html>

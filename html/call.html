@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>집콕</title>
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.global.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+</head>
+
+<body>
+	<div class="base-wrap" id="baseWrap">
+		<header class="base-header" id="baseHeader" data-title="교체요청"></header>
+		<div class="base-body" id="baseBody">
+			<main class="base-main" id="baseMain">
+				
+				<section class="cont-area fix-space">
+					
+					<fieldset class="field-step">
+						<legend>요청내용</legend>
+						<div class="field-row">
+							<h3>
+								<b>Step 1</b>
+								고객 정보를 입력해 주세요.
+								<span>현장 방문을 조율을 위해 정확한 연락처를 작성해 주세요.</span>
+							</h3>
+							<input type="tel" class="inp-base" placeholder="연락처를 입력해 주세요.">
+							<div class="type-addrsearch" style="margin-top:4vmin">
+								<input typw="tel" class="inp-base" placeholder="인증번호 입력">
+								<button type="button" class="btn-round">
+									<span>인증번호 확인</span>
+								</button>
+							</div>
+						</div>
+	
+						<div class="field-row">
+							<h3>
+								<b>Step 2</b>
+								오토바이 기종을 선택해 주세요
+							</h3>
+
+							<select>
+								<option>기종 선택</option>
+							</select>
+							<input type="tel" class="inp-base" placeholder="오토바이 기종을 선택해 주세요.">
+						</div>
+
+						<div class="field-row">
+							<h3>
+								<b>Step 3</b>
+								주소를 입력해 주세요.
+							</h3>
+							<div class="type-addrsearch">
+								<input typw="text" class="inp-base" placeholder="주소를 검색해주세요.">
+								<button type="button" class="btn-round">
+									<span>내 주소 목록</span>
+								</button>
+							</div>
+						</div>
+
+						<div class="field-row">
+							<h3>
+								<b>Step 4</b>
+								작업 희망일을 입력해 주세요.
+								<span>일요일, 공휴일은 서비스가 불가능합니다. <br>
+									일정은 수리홈즈와 조율 후 변동될 수 있습니다.</span>
+							</h3>
+							<div class="type-date">
+								<input type="date" required pattern="\d{4}-\d{2}-\d{2}" class="inp-base" placeholder="희망 년월일을 선택해 주세요.">
+							</div>
+							<div class="type-time">
+								<input type="time" class="inp-base" placeholder="시간">
+							</div>
+						</div>
+
+						
+					</fieldset>
+
+					<div class="btn-footer">
+						<button type="button" class="btn-base"><span>교체 요청하기</span></button>
+					</div>
+				</section>
+				
+
+			</main>
+		</div>
+		<section class="base-nav" id="baseNav"></section>
+	</div>
+
+	<script>
+		;(function($, win, doc, undefined) {
+			$(doc).ready(function() {
+				$plugins.common.init();
+
+				$('.btn-round.type-photo').on('click', function(){
+					$('#photoFileUpload').trigger('click');
+				});
+				
+			});
+		})(jQuery, window, document);
+	</script>
+</body>
+</html>

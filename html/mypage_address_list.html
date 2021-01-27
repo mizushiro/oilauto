@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>집콕</title>
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.global.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+</head>
+
+<body>
+	<div class="base-wrap" id="baseWrap">
+		<header class="base-header" id="baseHeader" data-title="주소관리"></header>
+		<div class="base-body" id="baseBody">
+			<main class="base-main" id="baseMain">
+				<!-- content -->
+
+				<section class="cont-area fix-space">
+					<ul class="list-addr">
+						<li class="none">
+							등록된 주소가 없습니다.
+						</li>
+
+						<li>
+							<div class="txt">
+								<em>#시흥동</em>
+								<b>서울 특별시 금천구 시흥대로 158 (시 흥동) 202호</b>
+							</div>
+							<div class="btn">
+								<button type="button" class="btn-edit"><span class="blind">수정</span></button>
+								<button type="button" class="btn-del"><span class="blind">삭제</span></button>
+							</div>
+						</li>
+						<li>
+							<div class="txt">
+								<em>#시흥동</em>
+								<b>서울 특별시 금천구 시흥대로 158 (시 흥동) 202호</b>
+							</div>
+							<div class="btn">
+								<button type="button" class="btn-edit"><span class="blind">수정</span></button>
+								<button type="button" class="btn-del"><span class="blind">삭제</span></button>
+							</div>
+						</li>
+					</ul>
+
+					<div class="btn-footer">
+						<a href="../html/mypage_address.html" class="btn-base"><span>주소 등록하기</span></a>
+					</div>
+				</section>
+
+				<!-- //content -->
+			</main>
+		</div>
+		<section class="base-nav" id="baseNav" data-nav="3"></section>
+	</div>
+
+	<script>
+		;(function($, win, doc, undefined) {
+			$(doc).ready(function() {
+				$plugins.common.init();
+
+				$('.btn-edit').on('click', function(){
+					location.href = '../html/mypage_address.html';
+				});
+			});
+		})(jQuery, window, document);
+	</script>
+</body>
+</html>

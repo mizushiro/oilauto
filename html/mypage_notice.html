@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>집콕</title>
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.global.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+</head>
+
+<body>
+	<div class="base-wrap" id="baseWrap">
+		<header class="base-header" id="baseHeader" data-title="공지사항"></header>
+		<div class="base-body" id="baseBody">
+			<main class="base-main" id="baseMain">
+				<!-- content -->
+
+				<section class="cont-area none-space">
+					<dl class="ui-acco type-notice" id="exeNotice">
+						<div class="ui-acco-wrap">
+							<dt class="ui-acco-tit">
+								<button type="button" class="ui-acco-btn">
+									<span>[공지] 서비스 가능한 지역은 어디인가요서비스 가능한 지역은 어디인가요서비스 가능한 지역은 어디인가요?</span>
+								</button>
+							</dt>
+							<dd class="ui-acco-pnl">
+								<div class="ui-acco-pnl-wrap">
+									<b class="a">@</b> 현재 강남, 서포, 송파, 광진, 성동, 마포, 용산, 종로, 중구 9개 지역구에서만 서비스를 시행하고 있습니다.
+									더 많은 지역에서 집콕 서비스를 이용할 수 있도록 노력하겠습니다.
+								</div>
+							</dd>
+						</div>
+
+						<div class="ui-acco-wrap">
+							<dt class="ui-acco-tit">
+								<button type="button" class="ui-acco-btn">
+									<span>[공지] 서비스 가능한 지역은 어디인가요?</span>
+								</button>
+							</dt>
+							<dd class="ui-acco-pnl">
+								<div class="ui-acco-pnl-wrap">
+									<b class="a">@</b> 현재 강남, 서포, 송파, 광진, 성동, 마포, 용산, 종로, 중구 9개 지역구에서만 서비스를 시행하고 있습니다.
+									더 많은 지역에서 집콕 서비스를 이용할 수 있도록 노력하겠습니다.
+								</div>
+							</dd>
+						</div>
+
+					</dl>
+				</section>
+
+				<!-- //content -->
+			</main>
+		</div>
+		<section class="base-nav" id="baseNav" data-nav="3"></section>
+	</div>
+
+	<script>
+		;(function($, win, doc, undefined) {
+			$(doc).ready(function() {
+				$plugins.common.init();
+
+				$plugins.uiAccordion({
+					id: 'exeNotice', 
+					current: null, 
+					autoclose: true
+				});
+			});
+		})(jQuery, window, document);
+	</script>
+</body>
+</html>

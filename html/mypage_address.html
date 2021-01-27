@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>집콕</title>
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.global.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+</head>
+
+<body>
+	<div class="base-wrap" id="baseWrap">
+		<header class="base-header" id="baseHeader" data-title="주소등록"></header>
+		<div class="base-body" id="baseBody">
+			<main class="base-main" id="baseMain">
+				<!-- content -->
+
+				<section class="cont-area fix-space">
+					<form>
+						<fieldset>
+							<legend>주소정보 입력</legend>
+							<div class="field-row">
+								<input typw="text" class="inp-base" placeholder="주소명을 입력해주세요.">
+							</div>
+							<div class="field-row type-addrsearch">
+								<input typw="text" class="inp-base" placeholder="주소를 검색해주세요.">
+								<button type="button" class="btn-round">
+									<span>주소검색</span>
+								</button>
+							</div>
+							<div class="field-row">
+								<input typw="text" class="inp-base" placeholder="상세주소를 입력해주세요.">
+							</div>
+						</fieldset>
+
+						<div class="btn-footer">
+							<button type="button" class="btn-base"><span>등록하기</span></button>
+						</div>
+					</form>
+				</section>
+
+				<!-- //content -->
+			</main>
+		</div>
+		<section class="base-nav" id="baseNav"></section>
+	</div>
+
+	<script>
+		;(function($, win, doc, undefined) {
+			$(doc).ready(function() {
+				$plugins.common.init();
+			});
+		})(jQuery, window, document);
+	</script>
+</body>
+</html>

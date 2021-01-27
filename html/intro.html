@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>집콕</title>
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.global.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	
+</head>
+
+<body class="page-intro">
+	<div class="base-wrap" id="baseWrap">
+		<div class="base-body" id="baseBody">
+			<main class="base-main" id="baseMain">
+				<!-- content -->
+				<div class="single-item">
+					<div>
+						<img src="../resources/img/intro_1.jpg" alt="fast 우리 집, 우리 매장 유지보수 접수 한 번으로 쉽고 빠르게">
+					</div>
+					<div>
+						<img src="../resources/img/intro_2.jpg" alt="best 분야별 전문 인력으로 구성된 집콕맨이 직접 서비스를 진행합니다.">
+					</div>
+					<div>
+						<img src="../resources/img/intro_3.jpg" alt="trust 합리적인 가격과 출장비가 없는 투명한 서비스를 경험해보세요.">
+					</div>
+				</div>
+
+				<div class="btn-footer">
+					<button type="button" class="btn-base" data-src="main"><span>건너뛰기</span></button>
+					<button type="button"  class="btn-base" data-src="next" ><span>다음</span></button>
+				</div>
+						  
+				<!-- //content -->
+			</main>
+		</div>
+	</div>
+
+	<script>
+		;(function($, win, doc, undefined) {
+			$(doc).ready(function() {
+				$plugins.common.init();
+				$('.btn-footer .btn-base').on('click', function(){
+					var src = this.getAttribute('data-fullText');
+
+					if (src === 'main') {
+						location.href = '../html/index.html';
+					} else {
+						$('.single-item').slick('slickNext');
+					}
+				});
+				
+				var curNum = null
+				$('.single-item').on('afterChange', function(event, slick, currentSlide){
+					if (curNum === currentSlide && currentSlide === 2) {
+						location.href = '../html/index.html';
+					}
+					curNum = currentSlide;
+				});
+
+
+				$('.single-item').slick({
+					dots: true,
+					infinite: false,
+					arrows: false
+				});
+			});
+		})(jQuery, window, document);
+	</script>
+</body>
+</html>

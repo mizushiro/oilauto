@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>집콕</title>
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.global.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+</head>
+
+<body>
+	<div class="base-wrap" id="baseWrap">
+		<header class="base-header" id="baseHeader" data-title="마이페이지"></header>
+		<div class="base-body" id="baseBody">
+			<main class="base-main" id="baseMain">
+				<!-- content -->
+				
+				<section class="subtit-area type-mypage">
+					<div class="logo"><span class="blind">오토오일</span></div>
+
+					<div class="subtit-area-txt">
+						<div>
+							누적 <strong>3</strong>회 이용중
+						</div>
+						<span>10회 이용시 마다<br> 할인 혜택을 받을 수 있습니다.</span>
+					</div>
+				</section>
+
+				<section class="cont-area" style="padding-top:0">
+					<ul class="list-arrow">
+						<li>
+							<a href="../html/mypage_address_list.html">주소관리</a>
+						</li>
+						<li>
+							<a href="../html/mypage_faq.html">자주묻는질문</a>
+						</li>
+						<li>
+							<a href="../html/mypage_notice.html">공지사항</a>
+						</li>
+						<li>
+							<a href="#">개인정보취급방침</a>
+						</li>
+					</ul>
+				</section>
+
+				<!-- //content -->
+			</main>
+		</div>
+		<section class="base-nav" id="baseNav" data-nav="3"></section>
+	</div>
+
+	<script>
+		;(function($, win, doc, undefined) {
+			$(doc).ready(function() {
+				$plugins.common.init();
+			});
+		})(jQuery, window, document);
+	</script>
+</body>
+</html>
