@@ -82,6 +82,7 @@ input[type="file"]{ -webkit-appearance: none; background:transparent; font-size:
 .btn-del{width:10vmin; height:10vmin; border-radius:50%; background:#999; margin:0 0 0 1vmin; display: inline-block;}
 .btn-del::before{content:"delete_forever"; font-family: 'Material Icons'; display:block; font-size:6vmin; color:#fff}
 
+.btn-base.grey{background:#999;}
 .btn-noti{position:absolute; top:2vmin; right:4vmin;  z-index:2;}
 .btn-noti::before{content:"room"; font-family: 'Material Icons'; display:block; font-size:10vmin; color:#e56400;}
 
@@ -357,7 +358,7 @@ textarea{width:100%; border:0; font-size:3.4vmin; border-bottom:1px solid #ddd;}
 
 .oper-step{width:100%; position:relative; background:#f7f7f7; color:#222; text-align: center; padding:5vmin 0 5vmin;}
 .oper-step > strong{display:block; width:100%; font-size:4vmin; font-weight:600; margin:0 0 3vmin;}
-.oper-step li{display:inline-block; font-size:3vmin; padding:0 2.5vmin; color:#aaa;}
+.oper-step li{display:inline-block; font-size:3vmin; padding:0 6vmin; color:#aaa; position: relative; z-index:1;}
 .oper-step li::before{content:""; display:block; width:3vmin; height:3vmin; border-radius: 50%; background:#ddd; margin:0 auto 1vmin;}
 .oper-step::after{content: ""; display:block; width:60vmin; height:1px; background:#ddd; position: absolute; top:15.5vmin; left:50%; transform: translate(-50%, 0);}
 .oper-step li.selected{color:#e56400; font-weight:600;}
@@ -368,7 +369,8 @@ textarea{width:100%; border:0; font-size:3.4vmin; border-bottom:1px solid #ddd;}
 .oper-detail dt strong{color:#222; font-weight:600; font-size:5vmin; display:block;}
 .oper-detail dt span{display:inline-block; font-szie:3vmin; color:#aaa; margin-right:1.5vmin; vertical-align: middle;}
 .oper-detail dt span.div{font-size:2vmin;}
-.oper-detail dd{font-size:4vmin; color:#666;}
+.oper-detail dt span.addr{font-size:4vmin; color:#222;}
+.oper-detail dd{font-size:4vmin; color:#666; margin-bottom:2vmin}
 .oper-detail .photo {display:flex; justify-content:space-between; flex-wrap:wrap; padding:4vmin 0}
 .oper-detail .photo img{flex:1; max-width:44vmin; margin-bottom:4vmin}
 @media (orientation: landscape) {

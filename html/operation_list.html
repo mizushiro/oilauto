@@ -8,7 +8,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="mobile-web-app-capable" content="yes">
 
-	<title>집콕</title>
+	<title>오토오일</title>
 
 	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
 	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
@@ -22,7 +22,7 @@
 
 <body>
 	<div class="base-wrap" id="baseWrap">
-		<header class="base-header" id="baseHeader"></header>
+		<header class="base-header" id="baseHeader" data-title="작업내역보기"></header>
 		<div class="base-body" id="baseBody">
 			<main class="base-main" id="baseMain">
 				<!-- content -->
@@ -40,7 +40,7 @@
 								<span>서울특별시 금천구 시흥대로 158(시흥동) 202호</span>
 							</div>
 							<div class="btn">
-								<button type="button" class="btn-base"><span>접수완료</span></button>
+								<button type="button" class="btn-base"><span>접수</span></button>
 							</div>
 						</li>
 						<li>
@@ -50,21 +50,31 @@
 								<span>서울특별시 금천구 시흥대로 158(시흥동) 202호</span>
 							</div>
 							<div class="btn">
-								<button type="button" class="btn-base"><span>접수완료</span></button>
+								<button type="button" class="btn-base"><span>출동</span></button>
+							</div>
+						</li>
+						<li>
+							<div class="txt">
+								<em>접수일시 : 2021.01.11 11:24</em>
+								<b>1월 11일 작업 요청</b>
+								<span>서울특별시 금천구 시흥대로 158(시흥동) 202호</span>
+							</div>
+							<div class="btn">
+								<button type="button" class="btn-base grey"><span>완료</span></button>
 							</div>
 						</li>
 					</ul>
 
-					<div class="btn-footer">
+					<!-- <div class="btn-footer">
 						<a href="../html/mypage_address.html" class="btn-base"><span>주소 등록하기</span></a>
-					</div>
+					</div> -->
 				</section>
 				<!-- //content -->
 			</main>
 
 			
 		</div>
-		<section class="base-nav" id="baseNav"></section>
+		<section class="base-nav" id="baseNav" data-nav="1"></section>
 	</div>
 
 	<section class="ui-modal" id="modalCallOption" role="dialog" aria-hidden="true">

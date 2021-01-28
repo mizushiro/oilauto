@@ -8,7 +8,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="mobile-web-app-capable" content="yes">
 
-	<title>집콕</title>
+	<title>오토오일</title>
 
 	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
 	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
@@ -64,7 +64,7 @@
 							</h3>
 							<div class="type-addrsearch">
 								<input typw="text" class="inp-base" placeholder="주소를 검색해주세요.">
-								<button type="button" class="btn-round">
+								<button type="button" class="btn-round" id="addressListPopup">
 									<span>내 주소 목록</span>
 								</button>
 							</div>
@@ -96,16 +96,67 @@
 
 			</main>
 		</div>
-		<section class="base-nav" id="baseNav"></section>
+		<section class="base-nav" id="baseNav" data-nav="2"></section>
 	</div>
+
+	<section class="ui-modal" id="modalAddressList" role="dialog" aria-hidden="true">
+		<div class="ui-modal-wrap type-fullbutton">
+
+			<div class="ui-modal-cont">
+				<ul class="list-addr type-b">
+					<li class="none">
+						등록된 주소가 없습니다.
+					</li>
+
+					<li>
+						<input type="radio" id="addrLs_1" name="addrLs">
+						<label for="addrLs_1" class="txt">
+							<em>#시흥동</em>
+							<b>서울 특별시 금천구 시흥대로 158 (시흥동) 202호</b>
+						</label>
+
+						
+					</li>
+					<li>
+						<input type="radio" id="addrLs_2" name="addrLs">
+						<label for="addrLs_2" class="txt">
+							<em>#시흥동</em>
+							<b>서울 특별시 금천구 시흥대로 158 (시흥동) 202호</b>
+						</label>
+						
+					</li>
+				</ul>
+			</div>
+			<div class="ui-modal-footer">
+				<div class="btn-wrap">
+
+					<button type="button" class="btn-base" id="callNext" onclick="$plugins.uiModalClose({ id:'modalCallOption' })">
+						<span>선택하기</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<script>
 		;(function($, win, doc, undefined) {
 			$(doc).ready(function() {
 				$plugins.common.init();
 
-				$('.btn-round.type-photo').on('click', function(){
-					$('#photoFileUpload').trigger('click');
+				// $('.btn-round.type-photo').on('click', function(){
+				// 	$('#photoFileUpload').trigger('click');
+				// });
+
+				$('#addressListPopup').on('click', function(){
+					$plugins.uiModalOpen({ 
+						id:'modalAddressList', 
+						type: 'normal',
+						ps: 'center',
+						mg: 10,
+						callback:function() { console.log('open callback'); },
+						closeCallback:function() { console.log('close callback'); },
+						endfocus:false 
+					});
 				});
 				
 			});
