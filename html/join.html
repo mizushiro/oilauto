@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>오토오일</title>
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.global.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+</head>
+
+<body class="page-join">
+	<div class="base-wrap" id="baseWrap">
+		<header class="base-header" id="baseHeader">
+		</header>
+		<div class="base-body" id="baseBody">
+			<main class="base-main" id="baseMain">
+
+				<section class="cont-area">
+					<fieldset class="field-step">
+						<legend>회원가입 정보 입력</legend>
+						<div class="field-row">
+							<div class="type-email">
+								<input type="text" class="inp-base" placeholder="이메일을 입력해 주세요." title="이메일">
+								<button type="button" class="btn-round">
+									<span>중복확인</span>
+								</button>
+							</div>
+						</div>
+	
+						<div class="field-row">
+							<input type="password" class="inp-base" placeholder="비밀번호를 입력해 주세요." title="비밀번호">
+						</div>
+						<div class="field-row">
+							<input type="password" class="inp-base" placeholder="새 비밀번호를 입력해 주세요." title="새 비밀번호">
+						</div>
+
+						<div class="field-row">
+							<input type="text" class="inp-base" placeholder="이름을 입력해 주세요." title="이름">
+							<em class="bul-care">* 작업요청 시 고객님을 확인하는 용도로 이름을 수집합니다.</em>
+						</div>
+
+						<div class="field-row">
+							<div class="type-terms">
+								<input type="checkbox" id="ckb1_1">
+								<label for="ckb1_1" class="lb-check">오일셔틀 이용약관 (필수)</label>
+
+								<button type="button" class="btn-arrow ui-terms" data-page="modalTerms1">
+									<span>약관보기</span>
+								</button>
+							</div>
+							<div class="type-terms">
+								<input type="checkbox" id="ckb1_2">
+								<label for="ckb1_2" class="lb-check">개인정보 수집 및 이용동의 (필수)</label>
+
+								<button type="button" class="btn-arrow ui-terms" data-page="modalTerms2">
+									<span>약관보기</span>
+								</button>
+							</div>
+							
+						</div>
+						
+						<div class="btn-area">
+							<button type="button" class="btn-base"><span>가입하기</span></button>
+						</div>
+					
+					</fieldset>
+				</section>
+
+			</main>
+		</div>
+		<!-- <section class="base-nav" id="baseNav"></section> -->
+
+		
+	</div>
+
+	<script>
+		;(function($, win, doc, undefined) {
+			$(doc).ready(function() {
+				$plugins.common.init();
+
+				$('.ui-terms').on('click', function(){
+					var page = this.getAttribute('data-page');
+
+					$plugins.uiModalOpen({ 
+						id:page, 
+						type: 'normal',
+						ps: 'center',
+						mobileFull: true,
+						src: './inc/' + page + '.html',
+					});
+				});
+				
+			});
+		})(jQuery, window, document);
+	</script>
+</body>
+</html>

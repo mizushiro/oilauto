@@ -20,54 +20,61 @@
 	<script src="../resources/js/ui.common.js"></script>
 </head>
 
-<body>
+<body class="page-login">
 	<div class="base-wrap" id="baseWrap">
-		<header class="base-header" id="baseHeader" data-title="마이페이지"></header>
+		<!-- <header class="base-header" id="baseHeader"></header> -->
 		<div class="base-body" id="baseBody">
 			<main class="base-main" id="baseMain">
-				<!-- content -->
 				
-				<section class="subtit-area type-mypage">
-					<div class="logo"><span class="blind">오토오일</span></div>
+				
 
-					<div class="subtit-area-txt">
-						<div>
-							<b>변사장</b>
-							<button type="butotn" class="btn-edit"><span class="blind">수정하기</span></button>
-							<br>
-							누적 <strong>3</strong>회 이용중
-						</div>
-						<span>10회 이용시 마다<br> 할인 혜택을 받을 수 있습니다.</span>
+				<section class="cont-area">
+					<button class="btn-arrow"><span>건너뛰기</span></button>
+					<h1><img src="../resources/img/logo-login.png" alt="집콕"></h1>
+
+
+					<div class="login-type">
+						<a href="../html/join_sns.html">
+							<span>로그인</span>
+						</a>
+					</div>
+<!-- 					
+					<ul class="login-type">
+						<li class="type-k">
+							<a href="../html/join_sns.html">
+								<span>카카오톡으로 로그인</span>
+							</a>
+						</li>
+						<li class="type-n">
+							<a href="../html/join_sns.html">
+								<span>네이버로 로그인</span>
+							</a>
+						</li>
+						<li class="type-g">
+							<a href="../html/join_sns.html">
+								<span>구글로 로그인</span>
+							</a>
+						</li>
+					</ul> -->
+
+					<div class="login-type2">
+						<a href="../html/login_email.html" class="type-e"><span>이메일로 로그인</span></a>
+						<span>|</span>
+						<a href="../html/join.html" class="type-j"><span>회원가입</span></a>
 					</div>
 				</section>
+				
 
-				<section class="cont-area" style="padding-top:0">
-					<ul class="list-arrow">
-						<li>
-							<a href="../html/mypage_address_list.html">주소관리</a>
-						</li>
-						<li>
-							<a href="../html/mypage_faq.html">자주묻는질문</a>
-						</li>
-						<li>
-							<a href="../html/mypage_notice.html">공지사항</a>
-						</li>
-						<li>
-							<a href="#">개인정보취급방침</a>
-						</li>
-					</ul>
-				</section>
-
-				<!-- //content -->
 			</main>
 		</div>
-		<section class="base-nav" id="baseNav" data-nav="3"></section>
+		<!-- <section class="base-nav" id="baseNav"></section> -->
 	</div>
 
 	<script>
 		;(function($, win, doc, undefined) {
 			$(doc).ready(function() {
 				$plugins.common.init();
+
 			});
 		})(jQuery, window, document);
 	</script>
