@@ -76,6 +76,8 @@ input[type="file"]{ -webkit-appearance: none; background:transparent; font-size:
 .btn-home::before{content:"home"; font-family: 'Material Icons'; display:block; font-size:8vmin; color:#e56400;}
 .btn-edit{width:10vmin; height:10vmin; border-radius:50%; background:#e56400; margin:0 0 0 1vmin; display: inline-block;}
 .btn-edit::before{content:"edit"; font-family: 'Material Icons'; display:block; font-size:6vmin; color:#fff}
+.btn-logout{width:10vmin; height:10vmin; border-radius:50%; background:#888; margin:0 0 0 1vmin; display: inline-block;}
+.btn-logout::before{content:"logout"; font-family: 'Material Icons'; display:block; font-size:6vmin; color:#fff}
 .btn-round{background:#999; color:#fff; font-size:3.4vmin; padding:1.2vmin 4vmin 1vmin; border-radius:6vmin}
 .btn-base{width:100%; background:#e56400; color:#fff; font-size:5vmin; font-weight:500; border:0; padding:4.8vmin 4vmin 3.2vmin; height:auto}
 .btn-base::before{content:"done"; font-family: 'Material Icons'; display:inline-block; font-size:6vmin; color:#fff; vertical-align:middle; margin-right:1vmin; font-weight:600;}
@@ -394,13 +396,16 @@ textarea{width:100%; border:0; font-size:3.4vmin; border-bottom:1px solid #ddd;}
 .page-main .btn-base.type-round{background-color:#666;}
 
 
-.main-addr{width:100%; position: relative; border-radius: 100vmin; background:#eee;
-padding:2vmin 15vmin 0 15vmin; margin-top:4vmin;}
+.main-addr{width:100%; position: relative; border-radius: 100vmin; background:#eee;padding:2vmin 15vmin 0 15vmin; margin-top:4vmin;}
 .main-addr .inp-base{background-color:transparent; border:0; padding:3.5vmin 0 4.5vmin;}
 .main-addr .btn-reg{position: absolute; top:3vmin; right:3vmin;}
 .btn-reg{font-family: 'Material Icons'; font-size:9vmin}
 .main-addr::before{content:"home";font-family: 'Material Icons'; font-size:7vmin; position:absolute; top:2.5vmin; left:5vmin; }
 
-
+.type-class {display:flex;flex-wrap:wrap;justify-content:space-between}
+.type-class .items {width:50%}
+.type-class .lb-check {font-size:4.4vmin}
+.type-class .lb-check:before {min-width:6vmin;min-height:6vmin}
+.type-class :checked + .lb-check:before {line-height:6vmin}
 
 
