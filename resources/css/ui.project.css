@@ -404,8 +404,8 @@ textarea{width:100%; border:0; font-size:3.4vmin; border-bottom:1px solid #ddd;}
 
 .type-class {display:flex;flex-wrap:wrap;justify-content:space-between}
 .type-class .items {width:50%}
-.type-class .lb-check {font-size:4.4vmin}
-.type-class .lb-check:before {min-width:6vmin;min-height:6vmin}
+.type-class .lb-check {font-size:4.4vmin;text-decoration:none;-webkit-tap-highlight-color:transparent}
+.type-class .lb-check:before {min-width:6vmin;min-height:6vmin;border-radius:50%}
 .type-class :checked + .lb-check:before {line-height:6vmin}
 
 
