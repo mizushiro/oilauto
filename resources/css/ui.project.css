@@ -321,11 +321,10 @@ textarea{width:100%; border:0; font-size:3.4vmin; border-bottom:1px solid #ddd;}
 .type-trems .ui-modal-cont {font-size:3.4vmin; line-height: 1.8;}
 
 /* .page-main .base-wrap{padding:0 0 20vmin;} */
-.slogan{width:100%; background:url(../img/main_img.jpg) no-repeat 0 14vmin / 100%; background-attachment:fixed; height:53vmin; text-align: center; color:#fff;}
-.slogan > *{display:block; width:100%;}
-.slogan em{font-size:4vmin}
-.slogan strong{font-size:10vmin; font-weight:600; color:#e56400; margin-bottom:1vmin}
-.slogan span{font-size:3.4vmin; font-weight:20;}
+.hero{width:100%;  }
+.hero img{width:100%;}
+.slick-arrow{display:none !important;}
+
 .page-main .cont-area{width:100%; background:#fff; border-radius:5vmin; margin-top:-5vmin; text-align:center; padding:4vmin;}
 
 .list-main{position: relative; width:100%; display: flex; justify-content: space-around; margin:5vmin 0}
