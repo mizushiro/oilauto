@@ -18,6 +18,9 @@
 	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
 	<script src="../resources/js/ui.global.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../resources/js/lib/slick.css"/>
+	<script src="../resources/js/lib/slick.js"></script>
+
 </head>
 
 <body class="page-main">
@@ -27,9 +30,16 @@
 			<main class="base-main" id="baseMain">
 				<!-- content -->
 				
-				<div class="slogan">
-					<div class="blind">내가 있는 장소에서 쉽고 빠른 오토바이 오일교체!</div>
+				
+				<div class="hero">
+					<div>
+						<img src="../resources/img/main_img.jpg" alt="내가 있는 장소에서 쉽고 빠른 오토바이 오일교체!">
+					</div>
+					<div>
+						<img src="../resources/img/main_img.jpg" alt="내가 있는 장소에서 쉽고 빠른 오토바이 오일교체!">
+					</div>
 				</div>
+				
 
 				<section class="cont-area">
 					<div class="oil-replace">
@@ -98,6 +108,14 @@
 					type: 'normal',
 					ps: 'center'
 				
+				});
+
+				$('.hero').slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					autoplay: true,
+					autoplaySpeed: 4000,
 				});
 			});
 		})(jQuery, window, document);
