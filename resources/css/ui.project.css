@@ -286,7 +286,8 @@ textarea{width:100%; border:0; font-size:3.4vmin; border-bottom:1px solid #ddd;}
 .login-type .type-n a{background:#1ec800; color:#fff;}
 .login-type .type-g a::before{display:inline-block; background-image:url(../img/login_g.png); margin-top:-1vmin;}
 .login-type .type-g a{background:#4285f4; color:#fff;}
-
+.login-type .type-a a::before{display:inline-block; background-image:url(../img/login_a.png); margin-top:-1vmin; width:3.5vw}
+.login-type .type-a a{background:#4285f4; color:#fff;}
 
 .login-type2 > *{color:#fff; font-weight:500; display:inline-block; vertical-align:middle; margin:0 5px; font-size:3.4vmin;}
 
